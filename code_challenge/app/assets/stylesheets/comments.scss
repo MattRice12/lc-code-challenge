@@ -1,0 +1,61 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  margin: 5% 10%;
+}
+
+textarea {
+  width: 33%;
+  height: 100px;
+  &:hover {
+    background: #EEF1FC;
+  }
+}
+
+.errors {
+  color: red;
+  font-size: .9em;
+  ul {
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+  }
+}
+
+.field_with_errors, .form-body {
+  margin: 0;
+  display: block;
+}
+
+.field_with_errors textarea {
+  border: 1px solid red;
+}
+
+.comment-index {
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+}
+.comment {
+  width: 33%;
+  border: 1px solid gray;
+  &:hover {
+    background: #EEF1FC;
+  }
+  padding: 10px 2px;
+  p {
+    margin: 0;
+    padding: 0 5px;
+  }
+  sub {
+    margin: 5px;
+    font-size: .8em;
+    color: #8C867C;
+  }
+}

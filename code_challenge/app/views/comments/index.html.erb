@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="comment-form">
+    <h3>Write a new Comment!</h3>
+    <%= render "form", comment: comment %>
+  </div>
+  <div>
+    <h3>Comments</h3>
+    <ul class="comment-index">
+      <% comments.each do |comment| %>
+        <li class="comment">
+          <p><%= comment.text %></p>
+          <sub class="published">Submitted <%= submit_time(comment) %> ago.</sub>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

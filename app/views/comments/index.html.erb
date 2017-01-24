@@ -1,17 +1,24 @@
 <div class="content">
-  <div class="comment-form">
-    <h3>Write a new Comment!</h3>
-    <%= render "form", comment: comment %>
+  <div class="left-block">
+    <div class="comment-form">
+      <h2>Vent Away!</h2>
+      <%= render "form", comment: comment %>
+    </div>
+    <div>
+      <h2>Vents:</h2>
+      <ul class="comment-index">
+        <% comments.each do |comment| %>
+          <li class="comment">
+            <p><%= comment.text %></p>
+            <sub class="published">Submitted <%= submit_time(comment) %> ago.</sub>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-  <div>
-    <h3>Comments</h3>
-    <ul class="comment-index">
-      <% comments.each do |comment| %>
-        <li class="comment">
-          <p><%= comment.text %></p>
-          <sub class="published">Submitted <%= submit_time(comment) %> ago.</sub>
-        </li>
-      <% end %>
-    </ul>
+
+  <div class="right-block">
+    <h2>Instructions</h2>
+    <p>Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry comment, an affirmation, or absolute gibberish--it's your choice, and it's all anonymous!</p>
   </div>
 </div>

@@ -14,4 +14,26 @@
  *= require_self
  */
 
+@import 'variables';
 @import 'comments';
+
+body {
+  margin: 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+  }
+  p, sub {
+    font-family: $font-body;
+  }
+}
+
+nav {
+  background: $primary-color;
+  width: 100%;
+  h1 {
+    margin: 0;
+    padding: 10px 5%;
+    color: white;
+    font-size: 2em;
+  }
+}

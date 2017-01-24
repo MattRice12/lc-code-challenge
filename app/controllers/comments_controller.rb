@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
     if comment.save
-      redirect_to root
+      redirect_to :root
     else
       render "index.html.erb", locals: {
           comments: Comment.all,

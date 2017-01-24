@@ -6,6 +6,7 @@ class Comment < ApplicationRecord
 
   private
   def strip_whitespace
-    self.text = self.text.strip unless self.text.blank?
+    #DB already strips whitespace; so I want to make sure the validations catch that.
+    self.text = self.text.strip unless self.text.nil?
   end
 end

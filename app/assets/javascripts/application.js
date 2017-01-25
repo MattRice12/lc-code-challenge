@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function countChar(val) {
+  var len = val.value.length;
+  $('#charNum').text((500 - len) + " / 500");
+  if (len > 500) {
+    $('#charNum').css("color", "red")
+  } else {
+    $('#charNum').css("color", "black")
+  }
+};
+
+$("#charNum").focus(function() {
+  var textarea = $("#charNum");
+  var val = textarea.val();
+
+  textarea.focus().val("").val(val);
+
+})

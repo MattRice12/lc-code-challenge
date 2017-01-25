@@ -8,7 +8,8 @@
   </div>
 
   <div class="form-body">
-    <%= f.text_area :text %>
-    <%= f.submit "Post", class: "post-button" %>
+    <%= f.text_area :text, onkeyup: "countChar(this)", onfocus: "countChar(this)", autofocus: "true"  %>
+    <%= f.submit "Post", class: "post-button"%>
+    <sub class="char-count" id="charNum" />
   </div>
 <% end %>

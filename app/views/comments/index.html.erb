@@ -6,6 +6,9 @@
     </div>
     <div>
       <h2>Vents:</h2>
+      <% if comments.blank? %>
+        <p>No on has vented yet today. Be the first!</p>
+      <% end %>
       <ul class="comment-index">
         <% comments.each do |comment| %>
           <li class="comment">
@@ -18,7 +21,7 @@
   </div>
 
   <div class="right-block">
-    <h2>Instructions</h2>
-    <p>Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry comment, an affirmation, or absolute gibberish--it's your choice, and it's all anonymous!</p>
+    <h2>Welcome to Venter</h2>
+    <p>Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry comment, an affirmation, or absolute gibberish--it's your choice, and it's all anonymous! We clear the board daily so that no baggage you drop off here finds you again.</p>
   </div>
 </div>

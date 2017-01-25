@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 function countChar(val) {
   var len = val.value.length;
   $('#charNum').text((500 - len) + " / 500");
@@ -25,10 +26,13 @@ function countChar(val) {
   }
 };
 
-$("#charNum").focus(function() {
-  var textarea = $("#charNum");
-  var val = textarea.val();
-
-  textarea.focus().val("").val(val);
-
-})
+var open = true;
+function toggleInstructions() {
+  $(".instructions").slideToggle("fast");
+  if (open === true) {
+    $(".fa").addClass("fa-chevron-down").removeClass("fa-chevron-right");
+  } else {
+    $(".fa").addClass("fa-chevron-right").removeClass("fa-chevron-down");
+  }
+  open = !open;
+};

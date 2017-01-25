@@ -19,6 +19,7 @@
 
 body {
   margin: 0;
+  padding-top: 20px;
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-title;
   }
@@ -27,7 +28,15 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
   background: $primary-color;
   width: 100%;
   h1 {

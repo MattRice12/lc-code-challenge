@@ -1,13 +1,16 @@
 <%= form_for(comment) do |f| %>
-  <div class="errors">
-    <ul>
-      <% comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-
   <div class="form-body">
+
+    <div class="errors">
+      <% if comment.errors.present? %>
+        <ul>
+          <% comment.errors.full_messages.each do |msg| %>
+            <li id="error"><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+    
     <%= f.text_area :text, onkeyup: "countChar(this)", onfocus: "countChar(this)", autofocus: "true"  %>
     <%= f.submit "Post", class: "post-button"%>
     <sub class="char-count" id="charNum" />

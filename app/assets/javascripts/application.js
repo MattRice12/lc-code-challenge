@@ -49,8 +49,9 @@ $(document).on('turbolinks:load', function() {
     countChar(this);
   });
 
-  $(window).on('load', function() {
+  $(window).on('turbolinks:load', function() {
    countChar(textarea);
+   toggleOnSize();
   });
 
   $("#toggle").on('click', function() {
@@ -59,5 +60,5 @@ $(document).on('turbolinks:load', function() {
 
   $(window).on('resize', function() {
    toggleOnSize();
-  }).resize();
+  });
 });

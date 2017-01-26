@@ -8,15 +8,16 @@
       <h2>Vents:</h2>
       <% if vents.blank? %>
         <p>No on has vented yet today. Be the first!</p>
+      <% else %>
+        <ul class="vent-index">
+          <% vents.each do |vent| %>
+            <li class="vent">
+              <p><%= vent.text %></p>
+              <sub>Submitted <%= submit_time(vent) %> ago.</sub>
+            </li>
+          <% end %>
+        </ul>
       <% end %>
-      <ul class="vent-index">
-        <% vents.each do |vent| %>
-          <li class="vent">
-            <p><%= vent.text %></p>
-            <sub class="published">Submitted <%= submit_time(vent) %> ago.</sub>
-          </li>
-        <% end %>
-      </ul>
     </div>
   </div>
 

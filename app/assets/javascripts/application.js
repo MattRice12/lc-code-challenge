@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   function countChar(val) {
     var len = $(val).context.value.length
     var char = $('#charNum');

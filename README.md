@@ -1,7 +1,7 @@
 ## Venter
-[![Build Status](https://semaphoreci.com/api/v1/amattrice/reroot/branches/master/badge.svg)](https://semaphoreci.com/amattrice/reroot)
+[![Build Status](https://semaphoreci.com/api/v1/amattrice/lc-code-challenge/branches/master/badge.svg)](https://semaphoreci.com/amattrice/lc-code-challenge)
 
-[![Test Coverage](https://codeclimate.com/github/MattRice12/reroot/badges/coverage.svg)](https://codeclimate.com/github/MattRice12/reroot/coverage)
+[![Code Climate](https://codeclimate.com/github/MattRice12/lc-code-challenge/badges/gpa.svg)](https://codeclimate.com/github/MattRice12/lc-code-challenge)
 
 # About
 Venter is a simple application where a user inputs text, submits it, and it's contents are displayed on the page. As I adding to the stylistic elements of the app, I decided to give it a cathartic theme--that of a random anonymous message board where people can just unload all of their frustrations in 500 characters or less.

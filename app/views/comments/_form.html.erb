@@ -10,9 +10,9 @@
         </ul>
       <% end %>
     </div>
-    
-    <%= f.text_area :text, onkeyup: "countChar(this)", onfocus: "countChar(this)", autofocus: "true"  %>
+
+    <%= f.text_area :text, id: "textarea", autofocus: "true"  %>
     <%= f.submit "Post", class: "post-button"%>
-    <sub class="char-count" id="charNum" />
+    <sub class="char-count" id="charNum" >500 / 500</sub>
   </div>
 <% end %>

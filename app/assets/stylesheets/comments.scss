@@ -76,10 +76,11 @@ input[type=submit] {
 }
 
 .toggle {
-  display: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
   i {
     margin-left: 5px;
-    font-size: small;
   }
 }
 
@@ -116,11 +117,6 @@ input[type=submit] {
   }
 
   .right-block {
-    .toggle {
-      display: inline-block;
-      cursor: pointer;
-      margin: 0;
-    }
     .instructions {
       display: none;
     }

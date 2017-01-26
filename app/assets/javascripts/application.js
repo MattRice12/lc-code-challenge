@@ -16,23 +16,63 @@
 //= require_tree .
 
 
+$(document).ready(function() {
+  $(textarea).on('keyup', function() {
+    countChar(this);
+  });
+
+  $(window).on('load', function() {
+   countChar(textarea);
+  });
+
+  $("#toggle").on('click', function() {
+    toggleOnClick()
+  });
+
+  $(window).on('resize', function() {
+   toggleOnSize();
+  }).resize();
+});
+
+var open = true;
+
 function countChar(val) {
-  var len = val.value.length;
-  $('#charNum').text((500 - len) + " / 500");
+  var len = $(val).context.value.length
+  var char = $('#charNum');
+
+  $(char).text((500 - len) + " / 500");
   if (len > 500) {
-    $('#charNum').css("color", "red")
+    $(char).addClass("red-font")
   } else {
-    $('#charNum').css("color", "black")
+    $(char).removeClass("red-font")
   }
 };
 
-var open = true;
-function toggleInstructions() {
-  $(".instructions").slideToggle("fast");
-  if (open === true) {
-    $(".fa").addClass("fa-chevron-down").removeClass("fa-chevron-right");
-  } else {
-    $(".fa").addClass("fa-chevron-right").removeClass("fa-chevron-down");
-  }
+function showInstructions() {
+  $(".fa").addClass("fa-chevron-down").removeClass("fa-chevron-right");
+  $(".instructions").slideDown("fast");
+};
+
+function hideInstructions() {
+  $(".fa").addClass("fa-chevron-right").removeClass("fa-chevron-down");
+  $(".instructions").slideUp("fast");
+};
+
+function toggleOnClick() {
   open = !open;
+  if (open === true) {
+    showInstructions();
+  } else {
+    hideInstructions();
+  }
+};
+
+function toggleOnSize() {
+  if ($(window).width() > 975) {
+    open = true;
+    showInstructions();
+  } else {
+    open = false;
+    hideInstructions()
+  }
 };

@@ -17,6 +17,34 @@
 
 
 $(document).ready(function() {
+  function countChar(val) {
+    var len = $(val).context.value.length
+    var char = $('#charNum');
+    $(char).text((500 - len) + " / 500");
+    if (len > 500) {
+      $(char).addClass("red-font");
+    } else {
+      $(char).removeClass("red-font");
+    }
+  };
+
+  function toggleOnClick() {
+    $(".fa").toggleClass("fa-chevron-down").toggleClass("fa-chevron-right");
+    $(".instructions").slideToggle("fast");
+  };
+
+  function toggleOnSize() {
+    if ($(window).width() > 768) {
+      $("#toggle").hide();
+      $(".fa").addClass("fa-chevron-down").removeClass("fa-chevron-right");
+      $(".instructions").slideDown("fast");
+    } else {
+      $("#toggle").show();
+      $(".fa").addClass("fa-chevron-right").removeClass("fa-chevron-down");
+      $(".instructions").slideUp("fast");
+    }
+  };
+
   $(textarea).on('keyup', function() {
     countChar(this);
   });
@@ -33,46 +61,3 @@ $(document).ready(function() {
    toggleOnSize();
   }).resize();
 });
-
-var open = true;
-
-function countChar(val) {
-  var len = $(val).context.value.length
-  var char = $('#charNum');
-
-  $(char).text((500 - len) + " / 500");
-  if (len > 500) {
-    $(char).addClass("red-font")
-  } else {
-    $(char).removeClass("red-font")
-  }
-};
-
-function showInstructions() {
-  $(".fa").addClass("fa-chevron-down").removeClass("fa-chevron-right");
-  $(".instructions").slideDown("fast");
-};
-
-function hideInstructions() {
-  $(".fa").addClass("fa-chevron-right").removeClass("fa-chevron-down");
-  $(".instructions").slideUp("fast");
-};
-
-function toggleOnClick() {
-  open = !open;
-  if (open === true) {
-    showInstructions();
-  } else {
-    hideInstructions();
-  }
-};
-
-function toggleOnSize() {
-  if ($(window).width() > 975) {
-    open = true;
-    showInstructions();
-  } else {
-    open = false;
-    hideInstructions()
-  }
-};

@@ -50,3 +50,17 @@ nav {
 .red-font {
   color: red;
 }
+
+footer {
+  padding-bottom: 20px;
+  text-align: center;
+  p {
+    font-size: .7em;
+    margin: 0;
+    color: gray;
+    a {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}

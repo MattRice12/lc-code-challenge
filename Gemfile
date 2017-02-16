@@ -27,10 +27,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# gem 'waiable'
 gem 'pry-rails'
 gem 'whenever', require: false
 gem 'capybara'
 gem 'simplecov', :require => false, :group => :test
+# gem 'waiable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

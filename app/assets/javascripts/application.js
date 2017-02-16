@@ -20,11 +20,13 @@ $(document).on('turbolinks:load', function() {
   function countChar(val) {
     var len = $(val).context.value.length
     var char = $('#charNum');
-    $(char).text((500 - len) + " / 500");
+    $(char).text((500 - len));
     if (len > 500) {
       $(char).addClass("red-font");
+      $(char).attr("role", "alert")
     } else {
       $(char).removeClass("red-font");
+      $(char).removeAttr("role", "alert")
     }
   };
 
@@ -61,4 +63,28 @@ $(document).on('turbolinks:load', function() {
   $(window).on('resize', function() {
    toggleOnSize();
   });
+
+  // $("form").submit(function(event){
+  //   var textarea = $('#textarea')
+  //   var data = $(this).serializeArray();
+  //   $.ajax({
+  //     url: "/vents",
+  //     type: "POST",
+  //     data: data
+  //   }).done(function() {
+  //     console.log("success");
+  //   })
+  //   .fail(function() {
+  //     console.log("error");
+  //   })
+  //   .always(function() {
+  //     console.log("BUTTFACE");
+  //   });
+  // })
+
+  //
+  $("form").on("ajax:success",function(e, data, status, xhr){
+    $('#vent-index').prepend("<li class='vent'><p>" + data.text + "</p><sub>Submitted just now.</sub></li>");
+  });
+
 });

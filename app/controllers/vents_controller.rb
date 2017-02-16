@@ -10,14 +10,16 @@ class VentsController < ApplicationController
   def create
     vent = Vent.new(vent_params)
     if vent.save
-      redirect_to :root
+      if request.xhr?
+        render json: vent
+      else
+        redirect_to :root, notice: 'Vent successfully submitted.'
+      end
     else
-      render "index.html.erb", locals: {
-          vents: Vent.all,
-          vent: vent
-        }
+      render json: {status: "failure"}
     end
   end
+
 
   private
 

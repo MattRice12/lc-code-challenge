@@ -1,19 +1,19 @@
 <div class="content">
   <div class="left-block">
     <div class="vent-form">
-      <h1 tabindex="2">Vent Away!</h1>
+      <h1 tabindex="2"><%= t("vent.vent_away") %></h1>
       <%= render "form", vent: vent %>
     </div>
     <div>
-      <h1 tabindex="2">Vents:</h1>
+      <h1 tabindex="2"><%= t("vent.vents") %></h1>
       <% if vents.blank? %>
-        <p>No on has vented yet today. Be the first!</p>
+        <p> <%= t("vent.no_vents") %></p>
       <% else %>
         <ul class="vent-index" id="vent-index">
           <% vents.each do |vent| %>
             <li class="vent">
-              <p><%= t(vent.text) %></p>
-              <sub>Submitted <%= submit_time(vent) %> ago.</sub>
+              <p><%= vent.text %></p>
+              <sub><%= t("time.submitted", time: submit_time(vent)) %></sub>
             </li>
           <% end %>
         </ul>
@@ -22,8 +22,8 @@
   </div>
 
   <div class="right-block">
-    <h1 tabindex="1">Welcome to Venter</h1>
+    <h1 tabindex="1"><%= t("vent.welcome")%></h1>
     <p id="toggle" class="toggle">Instructions<i class="fa fa-chevron-down" aria-hidden="true"></i></p>
-    <span id="instructions" class="instructions"><p>Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry vent, a confession of love, or absolute gibberish--it's your choice, and it's all anonymous! We clear the board daily so that no baggage you drop off here finds you again.</p></span>
+    <span id="instructions" class="instructions"><p><%= t("vent.instructions") %></p></span>
   </div>
 </div>

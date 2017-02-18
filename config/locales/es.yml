@@ -1,32 +1,116 @@
 es:
-  vent:
-    title: Venter
-    welcome: Bienvenido a Venter
-    instructions: Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry vent, a confession of love, or absolute gibberish--it's your choice, and it's all anonymous! We clear the board daily so that no baggage you drop off here finds you again.
-    vent_away: Vent Away!
-    no_vents: No on has vented yet today. Be the first!
-    vents: Vents
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
 
   datetime:
     distance_in_words:
       about_x_hours:
-        one: Alrededor de 1 hora
-        other: "%{count} horas"
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
       x_days:
         one: 1 día
         other: "%{count} días"
       x_minutes:
         one: 1 minuto
         other: "%{count} minutos"
-      half_a_minute: medio minuto
-      less_than_x_minutes:
-        one: menos de 1 minuto
-        other: menos de %{count} minutos
-      submitted:
-        one: Enviado ahora.
-        other: "Alrededor de %{count}"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      present: debe estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      model_invalid: "La validación falló: %{errors}"
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: "es demasiado largo (1 carácter máximo)"
+        other: "es demasiado largo (%{count} caracteres máximo)"
+      too_short:
+        one: "es demasiado corto (1 carácter mínimo)"
+        other: "es demasiado corto (%{count} caracteres mínimo)"
+      wrong_length:
+        one: "no tiene la longitud correcta (1 carácter exactos)"
+        other: "no tiene la longitud correcta (%{count} caracteres exactos)"
+      other_than: debe ser distinto de %{count}
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+
+  vent:
+    title: Venter
+    welcome: Bienvenido a Venter
+    instructions: ¿Necesitas sacar algo de tu pecho pero no quieres que nadie sepa que lo dijiste? Bueno, ahora es tu oportunidad! Deje un respiradero enojado, una confesión del amor, o jabalí absoluto - es su opción, y es todo anónimo! Limpiaremos el tablero todos los días para que ningún equipaje que deje aquí te encuentre de nuevo.
+    vent_away: Ventile lejos
+    no_vents: No se ha ventilado todavía hoy. ¡Sé el primero!
+    vents: Vents
 
   time:
+    submitted:
+      one: Enviado ahora.
+      other: "Alrededor de %{count}."
     submitted_now: Enviado ahora.
 
-  footer: Designed by %{author}
+  footer: Personalizado por %{author}

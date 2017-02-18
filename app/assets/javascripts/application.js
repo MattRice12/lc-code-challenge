@@ -84,7 +84,6 @@ $(document).on('turbolinks:load', function() {
 
   //
   $("form").on("ajax:success",function(e, data, status, xhr){
-    console.log(t.time.submitted_now)
-    $('#vent-index').prepend("<li class='vent'><p>" + data.text + "</p><sub>" + t.time.submitted_now + "</sub></li>");
+    $('#vent-index').prepend("<li class='vent'><p>" + data.text + "</p><sub>" + t.time.submitted.one + "</sub></li>");
   });
 });

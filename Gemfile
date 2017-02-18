@@ -14,6 +14,7 @@ gem 'capybara'
 gem 'simplecov', :require => false, :group => :test
 # gem 'waiable'
 gem 'http_accept_language'
+gem 'i18n'
 
 group :development, :test do
   gem 'pry-rails'

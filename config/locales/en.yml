@@ -7,13 +7,9 @@ en:
     no_vents: No on has vented yet today. Be the first!
     vents: Vents
 
-  datetime:
-    distance_in_words:
-      submitted:
-        one: Submitted just now.
-        other: Submitted %{count} ago.
-
   time:
-    submitted_now: "Submitted just now."
+    submitted:
+      one: Submitted just now.
+      other: Submitted %{count} ago.
 
   footer: Designed by %{author}

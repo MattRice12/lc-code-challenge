@@ -1,4 +1,19 @@
 es:
+  vent:
+    title: Venter
+    welcome: Bienvenido a Venter
+    instructions: ¿Necesitas sacar algo de tu pecho pero no quieres que nadie sepa que lo dijiste? Bueno, ahora es tu oportunidad! Deje un respiradero enojado, una confesión del amor, o jabalí absoluto - es su opción, y es todo anónimo! Limpiaremos el tablero todos los días para que ningún equipaje que deje aquí te encuentre de nuevo.
+    vent_away: Ventile lejos
+    no_vents: No se ha ventilado todavía hoy. ¡Sé el primero!
+    vents: Vents
+
+  time:
+    submitted:
+      one: Enviado ahora.
+      other: "Alrededor de %{count}."
+
+  footer: "Personalizado por %{author}"
+
   activerecord:
     errors:
       messages:
@@ -98,19 +113,3 @@ es:
       create: Crear %{model}
       submit: Guardar %{model}
       update: Actualizar %{model}
-
-  vent:
-    title: Venter
-    welcome: Bienvenido a Venter
-    instructions: ¿Necesitas sacar algo de tu pecho pero no quieres que nadie sepa que lo dijiste? Bueno, ahora es tu oportunidad! Deje un respiradero enojado, una confesión del amor, o jabalí absoluto - es su opción, y es todo anónimo! Limpiaremos el tablero todos los días para que ningún equipaje que deje aquí te encuentre de nuevo.
-    vent_away: Ventile lejos
-    no_vents: No se ha ventilado todavía hoy. ¡Sé el primero!
-    vents: Vents
-
-  time:
-    submitted:
-      one: Enviado ahora.
-      other: "Alrededor de %{count}."
-    submitted_now: Enviado ahora.
-
-  footer: Personalizado por %{author}

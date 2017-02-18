@@ -1,4 +1,20 @@
 fr:
+  vent:
+    title: Venter
+    welcome: Bienvenue à Venter
+    instructions: Besoin d'obtenir quelque chose de votre poitrine, mais ne veulent pas que quelqu'un sache que vous l'avez dit? Eh bien, c'est maintenant votre chance! Laissez une échappée en colère, une confession d'amour, ou un gibberish absolu - c'est votre choix, et c'est tout anonyme! Nous nettoyons la planche tous les jours afin qu'aucun bagage que vous déposez ici ne vous retrouve.
+    vent_away: Vent loin!
+    no_vents: Il n'y a pas encore de ventilateur aujourd'hui. Soyez le premier!
+    vents: Vents
+
+
+  footer: "Créé par %{author}"
+
+  time:
+    submitted:
+      one: Soumis tout à l'heure.
+      other: "Posté il ya %{count}."
+
   activerecord:
     errors:
       messages:
@@ -97,19 +113,3 @@ fr:
       create: Créer un(e) %{model}
       submit: Enregistrer ce(tte) %{model}
       update: Modifier ce(tte) %{model}
-
-  vent:
-    title: Venter
-    welcome: Bienvenue à Venter
-    instructions: Besoin d'obtenir quelque chose de votre poitrine, mais ne veulent pas que quelqu'un sache que vous l'avez dit? Eh bien, c'est maintenant votre chance! Laissez une échappée en colère, une confession d'amour, ou un gibberish absolu - c'est votre choix, et c'est tout anonyme! Nous nettoyons la planche tous les jours afin qu'aucun bagage que vous déposez ici ne vous retrouve.
-    vent_away: Vent loin!
-    no_vents: Il n'y a pas encore de ventilateur aujourd'hui. Soyez le premier!
-    vents: Vents
-
-  time:
-    submitted:
-      one: Soumis tout à l'heure.
-      other: "Posté il ya %{count}."
-    submitted_now: Soumis tout à l'heure.
-
-  footer: Créé par %{author}

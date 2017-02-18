@@ -13,7 +13,7 @@
           <% vents.each do |vent| %>
             <li class="vent">
               <p><%= vent.text %></p>
-              <sub><%= t("time.submitted", time: submit_time(vent)) %></sub>
+              <sub><%= submit_time(vent) %></sub>
             </li>
           <% end %>
         </ul>

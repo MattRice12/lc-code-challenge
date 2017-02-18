@@ -1,7 +1,7 @@
-es:
+fr:
   vent:
     title: Venter
-    welcome: Bienvenido a Venter
+    welcome: FRRRRRRRRR
     instructions: Need to get something off your chest but don't want anyone to know you said it? Well, now's your chance! Leave an angry vent, a confession of love, or absolute gibberish--it's your choice, and it's all anonymous! We clear the board daily so that no baggage you drop off here finds you again.
     vent_away: Vent Away!
     no_vents: No on has vented yet today. Be the first!
@@ -10,23 +10,24 @@ es:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: Alrededor de 1 hora
-        other: "%{count} horas"
+        one: environ une heure
+        other: "environ %{count} heures"
       x_days:
-        one: 1 día
-        other: "%{count} días"
+        one: 1 jour
+        other: "%{count} jours"
       x_minutes:
-        one: 1 minuto
-        other: "%{count} minutos"
-      half_a_minute: medio minuto
+        one: 1 minute
+        other: "%{count} minutes"
+      half_a_minute: une demi-minute
       less_than_x_minutes:
-        one: menos de 1 minuto
-        other: menos de %{count} minutos
+        zero: moins d'une minute
+        one: moins d'une minute
+        other: moins de %{count} minutes
       submitted:
-        one: Enviado ahora.
-        other: "Alrededor de %{count}"
+        one: Soumis tout à l'heure.
+        other: "Posté il ya %{count}."
 
   time:
-    submitted_now: Enviado ahora.
+    submitted_now: Soumis tout à l'heure.
 
   footer: Designed by %{author}

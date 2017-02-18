@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /en|es|ja/ do
-    resources :vents
-  end
+  resources :vents
   root 'vents#index'
 end

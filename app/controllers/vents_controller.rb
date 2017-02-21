@@ -8,15 +8,17 @@ class VentsController < ApplicationController
   end
 
   def create
-    vent = Vent.new(vent_params)
-    if vent.save
-      if request.xhr?
-        render json: vent
+    @vent = Vent.new(vent_params)
+    respond_to do |format|
+      if @vent.save
+        if request.xhr?
+          format.json {render json: @vent}
+        else
+          format.html { redirect_to :root, notice: 'Vent was successfully created.' }
+        end
       else
-        redirect_to :root, notice: 'Vent successfully submitted.'
+        format.json { render json: @vent.errors, status: :unprocessable_entity }
       end
-    else
-      render json: {status: "failure"}
     end
   end
 

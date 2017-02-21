@@ -47,6 +47,20 @@ $(document).on('turbolinks:load', function() {
     }
   };
 
+  function showSuccess(data) {
+    $('.errors ul').remove()
+    $('.errors').append('<ul class="success"><li>Post successful!</li></ul>')
+    $('#vent-index').prepend('<li class="vent"><p>' + data.text + '</p><sub>' + t.time.submitted.one + '</sub></li>');
+  };
+
+  function showError(data) {
+    $('.errors ul').remove()
+    $('.errors').append('<ul class="error" aria-label="Errors"></ul>')
+    data.responseJSON.text.forEach(function(error) {
+      $('.errors ul').append('<li>Vent ' + error + '</li>')
+    });
+  }
+
   $(textarea).on('keyup', function() {
     countChar(this);
   });
@@ -64,26 +78,9 @@ $(document).on('turbolinks:load', function() {
    toggleOnSize();
   });
 
-  // $("form").submit(function(event){
-  //   var textarea = $('#textarea')
-  //   var data = $(this).serializeArray();
-  //   $.ajax({
-  //     url: "/vents",
-  //     type: "POST",
-  //     data: data
-  //   }).done(function() {
-  //     console.log("success");
-  //   })
-  //   .fail(function() {
-  //     console.log("error");
-  //   })
-  //   .always(function() {
-  //     console.log("BUTTFACE");
-  //   });
-  // })
-
-  //
   $("form").on("ajax:success",function(e, data, status, xhr){
-    $('#vent-index').prepend("<li class='vent'><p>" + data.text + "</p><sub>" + t.time.submitted.one + "</sub></li>");
+    showSuccess(data)
+  }).on("ajax:error",function(e, data, status, xhr){
+    showError(data)
   });
 });

@@ -1,17 +1,9 @@
 <%= form_for(vent, remote: true, id: "vent_form") do |f| %>
   <div class="form-body" role="form">
 
-    <div class="errors" tabindex="-1" role="group" aria-describedby="error-count">
-      <% if vent.errors.present? %>
-        <div id="error-count">Your vent has <%= pluralize(vent.errors.count, "error") %>.</div>
-        <ul>
-          <% vent.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-    <%= f.text_area :text, "aria-multiline": "true", "aria-required": "true", id: "textarea", tabindex: 2  %>
+    <div class="errors" tabindex="-1" role="alert" aria-describedby="error-count"></div>
+
+    <%= f.text_area :text, "aria-label": "Type your vent here. Vents must be between 5 and 500 characters.", "aria-required": "true", id: "textarea", tabindex: 2  %>
     <%= f.submit "Post", class: "post-button", tabindex: 2, id: "submit"%>
     <sub class="char-count" id="charNum" >500 / 500</sub>
   </div>

@@ -50,7 +50,12 @@ $(document).on('turbolinks:load', function() {
   function showSuccess(data) {
     $('.errors ul').remove()
     $('.errors').append('<ul class="success"><li>Post successful!</li></ul>')
+    if ($('#no-vents').length > 0) {
+      $('#no-vents').remove()
+      $('#vent-block').append('<ul class="vent-index" id="vent-index"></ul>');
+    }
     $('#vent-index').prepend('<li class="vent"><p>' + data.text + '</p><sub>' + t.time.submitted.one + '</sub></li>');
+    $("textarea").val("");
   };
 
   function showError(data) {

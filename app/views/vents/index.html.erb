@@ -4,10 +4,10 @@
       <h1 tabindex="2"><%= t("vent.vent_away") %></h1>
       <%= render "form", vent: vent %>
     </div>
-    <div>
+    <div id="vent-block">
       <h1 tabindex="2"><%= t("vent.vents") %></h1>
       <% if vents.blank? %>
-        <p> <%= t("vent.no_vents") %></p>
+        <p id="no-vents"> <%= t("vent.no_vents") %></p>
       <% else %>
         <ul class="vent-index" id="vent-index">
           <% vents.each do |vent| %>

@@ -47,8 +47,12 @@ $(document).on('turbolinks:load', function() {
     }
   };
 
+  function replaceErrorsClass() {
+    $('.errors').replaceWith('<div class="errors" tabindex="-1" role="alert"></div>')
+  }
+
   function showSuccess(data) {
-    $('.errors ul').remove()
+    replaceErrorsClass();
     $('.errors').append('<ul class="success"><li>Post successful!</li></ul>')
     if ($('#no-vents').length > 0) {
       $('#no-vents').remove()
@@ -59,7 +63,7 @@ $(document).on('turbolinks:load', function() {
   };
 
   function showError(data) {
-    $('.errors ul').remove()
+    replaceErrorsClass();
     $('.errors').append('<ul class="error" aria-label="Errors"></ul>')
     data.responseJSON.text.forEach(function(error) {
       $('.errors ul').append('<li>Vent ' + error + '</li>')

@@ -1,7 +1,7 @@
 <%= form_for(vent, remote: true, id: "vent_form") do |f| %>
   <div class="form-body" role="form">
 
-    <div class="errors" tabindex="-1" role="alert" aria-describedby="error-count"></div>
+    <div class="errors" tabindex="-1" role="alert"></div>
 
     <%= f.text_area :text, "aria-label": "Type your vent here. Vents must be between 5 and 500 characters.", "aria-required": "true", id: "textarea", tabindex: 2  %>
     <%= f.submit "Post", class: "post-button", tabindex: 2, id: "submit"%>

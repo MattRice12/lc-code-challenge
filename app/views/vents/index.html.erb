@@ -6,18 +6,9 @@
     </div>
     <div id="vent-block">
       <h1 tabindex="2"><%= t("vent.vents") %></h1>
-      <% if vents.blank? %>
-        <p id="no-vents"> <%= t("vent.no_vents") %></p>
-      <% else %>
         <ul class="vent-index" id="vent-index">
-          <% vents.each do |vent| %>
-            <li class="vent">
-              <p><%= vent.text %></p>
-              <sub><%= submit_time(vent) %></sub>
-            </li>
-          <% end %>
+          <%= render(partial: "vent", collection: vents) || content_tag(:p, t("vent.no_vents"), id: "no-vents") %>
         </ul>
-      <% end %>
     </div>
   </div>
 

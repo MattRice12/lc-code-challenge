@@ -51,21 +51,21 @@ $(document).on('turbolinks:load', function() {
     $('.errors').replaceWith('<div class="errors" tabindex="-1" role="alert"></div>')
   }
 
-  function showSuccess(data) {
+  function showSuccess(text) {
     replaceErrorsClass();
     $('.errors').append('<ul class="success"><li>Post successful!</li></ul>')
     if ($('#no-vents').length > 0) {
       $('#no-vents').remove()
       $('#vent-block').append('<ul class="vent-index" id="vent-index"></ul>');
     }
-    $('#vent-index').prepend('<li class="vent"><p>' + data.text + '</p><sub>' + t.time.submitted.one + '</sub></li>');
+    $('#vent-index').prepend('<li class="vent"><p>' + text + '</p><sub>' + t.time.submitted.one + '</sub></li>');
     $("textarea").val("");
   };
 
-  function showError(data) {
+  function showError(text) {
     replaceErrorsClass();
     $('.errors').append('<ul class="error" aria-label="Errors"></ul>')
-    data.responseJSON.text.forEach(function(error) {
+    text.forEach(function(error) {
       $('.errors ul').append('<li>Vent ' + error + '</li>')
     });
   }
@@ -88,8 +88,8 @@ $(document).on('turbolinks:load', function() {
   });
 
   $("form").on("ajax:success",function(e, data, status, xhr){
-    showSuccess(data)
+    showSuccess(xhr.responseJSON.text)
   }).on("ajax:error",function(e, data, status, xhr){
-    showError(data)
+    showError(data.responseJSON.text)
   });
 });
